@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,7 @@ public class FiniteStateMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentState = new FarState();
+        currentState = new FarState(this);
         currentState.Update();
 
     }
