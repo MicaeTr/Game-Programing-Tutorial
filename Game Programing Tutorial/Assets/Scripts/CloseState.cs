@@ -5,21 +5,22 @@ namespace DefaultNamespace
     public class CloseState : AbstractState
     {
         public CloseState(FiniteStateMachine newMachine)
-            {
-                machine = newMachine;
-            }
+        {
+            machine = newMachine;
+        }
 
-            public override void Update()
+        public override void Update()
+        {
+            mousePosition = Input.mousePosition;
+            if (outsideOfBounds(mousePosition))
             {
-                mousePosition = Input.mousePosition;
-                if (withinBounds(mousePosition))
-                {
-                    machine.switchState(new FarState(machine));
-                }
-                else
-                {
-                    machine.switchColor(Color.red);
-                }
+                machine.switchState(new FarState(machine));
+
             }
+            else
+            {
+                machine.switchColor(Color.red);
+            }
+        }
     }
 }

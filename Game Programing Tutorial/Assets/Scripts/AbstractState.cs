@@ -11,10 +11,10 @@ namespace DefaultNamespace
         {
         }
 
-        public bool withinBounds(Vector3 position)
+        public bool outsideOfBounds(Vector3 position)
         {
             return position.x < 295f || position.x > 585f ||
-                position.y < 125f || position.y > 250f;
+                   position.y < 125f || position.y > 250f;
         }
     }
 }

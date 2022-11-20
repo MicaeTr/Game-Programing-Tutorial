@@ -12,7 +12,7 @@ namespace DefaultNamespace
         public override void Update()
         {
             mousePosition = Input.mousePosition;
-            if (withinBounds(mousePosition))
+            if (outsideOfBounds(mousePosition))
                 {
                     machine.switchColor(Color.yellow);
                 }
